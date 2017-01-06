@@ -34,6 +34,5 @@
  * Front end modules
  */
 $GLOBALS['TL_LANG']['FMD']['w3s_spotify']       = 'Spotify';
-$GLOBALS['TL_LANG']['FMD']['w3s_spotify_btn']   = array('Spotify Button', 'Creates a Spotify Play Button.');
+$GLOBALS['TL_LANG']['FMD']['spotify_button']    = array('Spotify Play Button', 'Creates a Spotify Play Button.');
 
-?>

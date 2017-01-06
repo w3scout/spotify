@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
@@ -34,11 +34,11 @@
  */
 array_push($GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'], 'w3s_spotify_btn_type');
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['w3s_spotify_btn']  = '{title_legend},name,headline,type;{config_legend},w3s_spotify_btn_type,w3s_spotify_btn_theme,w3s_spotify_btn_view,w3s_spotify_btn_width,w3s_spotify_btn_height;{template_legend:hide},;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['spotify_button']  = '{title_legend},name,headline,type;{config_legend},w3s_spotify_btn_type;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['default'] = '';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['w3s_spotify_btn_type_uri']      = 'w3s_spotify_btn_uri';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['w3s_spotify_btn_type_trackset'] = 'w3s_spotify_btn_trackset';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['w3s_spotify_btn_type_uri']      = 'w3s_spotify_btn_uri,w3s_spotify_btn_theme,w3s_spotify_btn_width';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['w3s_spotify_btn_type_trackset'] = 'w3s_spotify_btn_trackset,w3s_spotify_btn_theme,w3s_spotify_btn_view,w3s_spotify_btn_height';
 
 
 
@@ -109,4 +109,3 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['w3s_spotify_btn_view'] = array
 );
 
 
-?>

@@ -11,12 +11,17 @@
  */
 
 
+ClassLoader::addNamespaces(array
+(
+    'w3scouts\spotifybutton',
+));
+
 /**
  * Register the classes
  */
 ClassLoader::addClasses(array
 (
-	'ModuleW3sSpotifyBtn' => 'system/modules/w3s_spotify/ModuleW3sSpotifyBtn.php',
+	'w3scouts\spotifybutton\ModuleSpotifyButton' => 'system/modules/w3s_spotify/modules/ModuleSpotifyButton.php',
 ));
 
 
@@ -25,5 +30,5 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'mod_w3s_spotify_btn' => 'system/modules/w3s_spotify/templates',
+	'mod_spotify_button' => 'system/modules/w3s_spotify/templates',
 ));
