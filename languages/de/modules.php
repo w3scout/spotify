@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
 /**
  * Contao Open Source CMS
@@ -33,5 +33,6 @@
  * Front end modules
  */
 $GLOBALS['TL_LANG']['FMD']['w3s_spotify']       = 'Spotify';
-$GLOBALS['TL_LANG']['FMD']['spotify_button']    = array('Spotify Play Button', 'Erzeugt einen Spotify Play Button.');
+$GLOBALS['TL_LANG']['FMD']['w3s_spotify_btn']   = array('Spotify Button', 'Erzeugt einen Spotify Play Button.');
 
+?>

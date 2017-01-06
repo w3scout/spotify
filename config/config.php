@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
 
 /**
  * TYPOlight webCMS
@@ -34,6 +34,8 @@ array_insert($GLOBALS['FE_MOD'], 4, array
 (
     'w3s_spotify' => array
     (
-        'spotify_button'    => 'w3scouts\spotifybutton\ModuleSpotifyButton'
+        'w3s_spotify_btn'    => 'ModuleW3sSpotifyBtn'
     )
 ));
+
+?>

@@ -1,4 +1,4 @@
-<?php
+<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
 /**
  * Contao Open Source CMS
@@ -51,3 +51,4 @@ $GLOBALS['TL_LANG']['tl_module']['coverart']    = 'Cover';
 $GLOBALS['TL_LANG']['tl_module']['uri']         = 'Spotify URI';
 $GLOBALS['TL_LANG']['tl_module']['trackset']    = 'Eigener Trackset';
 
+?>
