@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
@@ -28,22 +28,23 @@
  * @filesource
  */
 
+namespace w3scouts\spotifybutton;
 
 /**
- * Class ModuleW3sSpotifyBtn
+ * Class ModuleSpotifyButton
  *
  * @copyright  Darko Selesi
  * @author     Darko Selesi <https://w3scouts.com>
- * @package    w3s_spotify
+ * @package    spotify
  */
-class ModuleW3sSpotifyBtn extends Module
+class ModuleSpotifyButton extends \Module
 {
 
 	/**
 	 * Template
 	 * @var string
 	 */
-	protected $strTemplate = 'mod_w3s_spotify_btn';
+	protected $strTemplate = 'mod_spotify_button';
 
 
 	/**
@@ -54,15 +55,16 @@ class ModuleW3sSpotifyBtn extends Module
 	{
 		if (TL_MODE == 'BE')
 		{
-			$objTemplate = new BackendTemplate('be_wildcard');
+            /** @var \BackendTemplate|object $objTemplate */
+            $objTemplate = new \BackendTemplate('be_wildcard');
 
-			$objTemplate->wildcard = '### Spotify Play Button ###';
-			$objTemplate->title = $this->headline;
-			$objTemplate->id = $this->id;
-			$objTemplate->link = $this->name;
-			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['spotify_button'][0]) . ' ###';
+            $objTemplate->title = $this->headline;
+            $objTemplate->id = $this->id;
+            $objTemplate->link = $this->name;
+            $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
-			return $objTemplate->parse();
+            return $objTemplate->parse();
 		}
 
 		return parent::generate();
@@ -74,7 +76,6 @@ class ModuleW3sSpotifyBtn extends Module
 	 */
 	protected function compile()
 	{
-
         $strType = $this->w3s_spotify_btn_type;
 
         if($strType == '' || $strType == null) {
@@ -98,5 +99,3 @@ class ModuleW3sSpotifyBtn extends Module
 	}
 
 }
-
-?>
