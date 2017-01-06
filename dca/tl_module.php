@@ -32,8 +32,7 @@
 /**
  * Add palettes to tl_module
  */
-array_push($GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'], 'w3s_spotify_btn_type');
-
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'w3s_spotify_btn_type';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['spotify_button']  = '{title_legend},name,headline,type;{config_legend},w3s_spotify_btn_type;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['default'] = '';
@@ -107,5 +106,3 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['w3s_spotify_btn_view'] = array
     'reference'               => &$GLOBALS['TL_LANG']['tl_module'],
     'eval'                    => array('tl_class'=>'w50')
 );
-
-
