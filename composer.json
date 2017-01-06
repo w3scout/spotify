@@ -1,0 +1,36 @@
+{
+  "name": "w3scouts/spotify",
+  "description":"Add a Spotify Play Button to your Contao website and light it up with music!",
+  "keywords":["contao", "spotify", "music"],
+  "type": "contao-module",
+  "homepage":"https://github.com/w3scout/spotify.git",
+  "license":"LGPL-3.0+",
+  "authors":[
+    {
+      "name":"Darko Selesi",
+      "email":"hallo@w3scouts.com",
+      "homepage":"http://w3scouts.com",
+      "role":"Developer"
+    }
+  ],
+  "support":{
+    "issues":"https://github.com/w3scout/spotify.git/issues"
+  },
+  "require": {
+    "contao/core": ">=3.5,<4-dev",
+    "contao-community-alliance/composer-installer": "*"
+  },
+  "autoload": {
+    "classmap": [""]
+  },
+  "replace": {
+    "contao-legacy/w3s_spotify": "*"
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/w3s_spotify"
+      }
+    }
+  }
+}
